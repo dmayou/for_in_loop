@@ -30,9 +30,10 @@ for (val of arr) {
 // name is a key, and 'Dave' is the value associated with that key.
 // Keys and their associated values are separated by a colon, and
 // key:value pairs are separated by commas. Javascript objects are
-// pretty neat because you can store just about anything in them,
-// name those things in meaningful ways, but still refer to them
-// by a single variable name (obj in this case).
+// pretty neat because you can store just about anything in them--
+// even arrays or other objects-- name those things in meaningful
+// ways, but still refer to them by a single variable name (obj
+// in this case).
 let obj = {name: 'Dave', address: 'Minneapolis', favColor: 'blue'};
 
 // Since the keys of a given object aren't obvious, and even if known,
@@ -67,10 +68,11 @@ for (var i = 0; i < arrayOfKeys.length; i++) {
               + obj[arrayOfKeys[i]]  // again, messier
               );
 }
-// One could argue that the standard for loop is inferior because:
-// - it has an extra line for the Object.keys() method call,
-// - it allocates a useless new index value, i, and array, arrayOfKeys,
-// - and, (most importantly) it's harder to understand and maintain
+// One could argue that the standard for loop is inferior in this
+// case because
+// - it's harder to read and thus maintain,
+// - it has an extra line for the Object.keys() method call, and
+// - it allocates a useless new index value, i, and array, arrayOfKeys.
 
 // So, a for...in loop has its charms, if you can remember its
 // syntax. However, you can always get your work done just fine with a
