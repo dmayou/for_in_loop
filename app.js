@@ -20,7 +20,8 @@ for (var val in arr) {
 // I am trying to remember this by noting that 'in' and 'of' both have
 // two letters, but the first letter of 'of' is not 'i'. Just to make
 // things more confusing, there are other types of high-level for loops
-// like for...each that haven't been mentioned.
+// like for...each that haven't been mentioned. (Update: for...each is
+// deprecated in Javascript.)
 console.log('Output of the for...of loop:');
 for (val of arr) {
   console.log(val) ;
@@ -78,18 +79,23 @@ for (var i = 0; i < arrayOfKeys.length; i++) {
 // syntax. However, you can always get your work done just fine with a
 // standard for loop.
 
-// Play around with for loops
+//
+// Playing around with for loops
+//
 console.log('Playing with for loops!');
+
+// Each of the 3 expressions is optional
 let loopVar = 0;
 for (; loopVar < arr.length; ) {
   console.log(arr[loopVar++]);
 }
 
-// Bug?
+// Bug? What's happening?
 for (let i = 0; i < 4; i++); {
   console.log('Why is this only output once?');
 }
 
+// The comma operator allows multiple expressions
 for (let i = 0, j = 0; i + j < 6; i++, j++) {
   console.log('i =', i, 'j =', j);
 }
