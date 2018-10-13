@@ -77,3 +77,19 @@ for (var i = 0; i < arrayOfKeys.length; i++) {
 // So, a for...in loop has its charms, if you can remember its
 // syntax. However, you can always get your work done just fine with a
 // standard for loop.
+
+// Play around with for loops
+console.log('Playing with for loops!');
+let loopVar = 0;
+for (; loopVar < arr.length; ) {
+  console.log(arr[loopVar++]);
+}
+
+// Bug?
+for (let i = 0; i < 4; i++); {
+  console.log('Why is this only output once?');
+}
+
+for (let i = 0, j = 0; i + j < 6; i++, j++) {
+  console.log('i =', i, 'j =', j);
+}
