@@ -1,5 +1,7 @@
 // Example code for for, for...in, and for...of loops
 
+'use strict'; // hoping to develop good habits
+
 let arr = ['a', 'b', 'c'];
 
 // Standard for loop. Like Dane said, if you know this, you can get
@@ -12,7 +14,7 @@ for (let i = 0; i < arr.length; i++) {
 // Simple for...in example. The loop iterates over the index values of arr
 // My mnemonic for this is that 'in' and 'index' both start with 'i'.
 console.log('Output of the for...in loop:');
-for (var val in arr) {
+for (let val in arr) {
   console.log(val);
 }
 
@@ -23,7 +25,7 @@ for (var val in arr) {
 // like for...each that haven't been mentioned. (Update: for...each is
 // deprecated in Javascript.)
 console.log('Output of the for...of loop:');
-for (val of arr) {
+for (let val of arr) {
   console.log(val) ;
 }
 
@@ -42,7 +44,7 @@ let obj = {name: 'Dave', address: 'Minneapolis', favColor: 'blue'};
 // a for...in loop comes in handy:
 console.log('\nUsing a for...in loop to list an '
              + 'object\'s keys and values:');
-for (key in obj) {
+for (let key in obj) {
   console.log('Key: '
               + key             // the key, e.g., name
               + ', Value: '
