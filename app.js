@@ -22,8 +22,8 @@ for (let val in arr) {
 // I am trying to remember this by noting that 'in' and 'of' both have
 // two letters, but the first letter of 'of' is not 'i'. Just to make
 // things more confusing, there are other types of high-level for loops
-// like for...each that haven't been mentioned. (Update: for...each is
-// deprecated in Javascript.)
+// like for...each that haven't been mentioned. (Update: the for...each
+// loop is deprecated in Javascript.)
 console.log('Output of the for...of loop:');
 for (let val of arr) {
   console.log(val) ;
@@ -49,7 +49,7 @@ for (let key in obj) {
               + key             // the key, e.g., name
               + ', Value: '
               + obj[key]      // similar to array notation
-            );                // e.g., obj[name] = 'Dave'
+            );                // e.g., obj['name'] = 'Dave'
 }
 
 // A for...of loop is fine, but you wouldn't know the value of the key
@@ -92,7 +92,7 @@ for (; loopVar < arr.length; ) {
   console.log(arr[loopVar++]);
 }
 
-// Bug? What's happening?
+// Bug? What's happening? (It's a puzzle)
 for (let i = 0; i < 4; i++); {
   console.log('Why is this only output once?');
 }
